@@ -76,12 +76,17 @@ h1, p {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     background: linear-gradient(170deg, #FF79DA, 50%, #9356DC);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 }
 
-.button a {
-    color: white;
+.button:hover,
+.button:active {
+    background: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+    -webkit-transition: background 500ms;
+    -webkit-transition: box-shadow 500ms;
 }
 
 /************************************************
@@ -128,9 +133,10 @@ h1, p {
     align-items: center;
 }
 
-nav ul li a:hover,
-nav ul li a:active {
+nav .list-resto li:hover,
+nav .list-resto li:active {
     background-color: #F4EDFE;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
 }
 
 .number {
@@ -303,6 +309,20 @@ footer ul li a {
     margin-top: -40px;
 }
 
+.list-choice, .title-menu, .command{
+    animation: apparition 0.8s ease-out;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .title-menu {
     display: flex;
     align-items: center;
@@ -314,9 +334,8 @@ footer ul li a {
 .hearts .fa-regular:active {
     font-weight: 900;
     color: #FF79DA;
+    -webkit-transition: color 500ms;
 }
-
-
 
 .title-menu h2 {
     font-family: 'Shrikhand', cursive;
@@ -380,16 +399,15 @@ footer ul li a {
 }
 
 .like {
-    display: none;
     background-color: #99E2D0;
     width: 70px;
     height: 100%;
     border-radius: 0px 20px 20px 0px;
-    display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 }
+
 
 .like i {
     color: white;
