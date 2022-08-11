@@ -1,0 +1,407 @@
+/************************************************
+
+    GLOBAL
+
+*************************************************/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 425px;
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/************************************************
+
+    HEADER
+
+*************************************************/
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -8px 2px 14px rgb(0 0 0 / 73%);
+    padding: 0px 20px;
+}
+
+.logo img {
+    width: 150px;
+    margin: 20px auto;
+}   
+
+.gps {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9b1;
+}
+
+/************************************************
+
+    MAIN
+
+*************************************************/
+
+.text-main {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    padding: 30px 20px 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+h1, p {
+    width: 308px;
+    margin-top: 0px;
+}
+
+.button {
+    margin: 0px;
+    margin-top: 15px;
+    width: 220px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(170deg, #FF79DA, 50%, #9356DC);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.button a {
+    color: white;
+}
+
+/************************************************
+
+    NAV
+
+*************************************************/
+
+.fonction {
+    padding: 40px 20px
+}
+
+.fonction h2 {
+    margin-bottom: 30px;
+}
+
+.list-fonc {
+    max-width: 100%;
+    margin: 0px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-fonc li {
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.list-fonc li a {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    background-color: #F4EDFE;
+}
+
+.number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 15px;
+    margin-left: -15px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9356DC;
+}
+
+.number span {
+    color: white;
+}
+
+.list-fonc li span i {
+    margin-right: 20px;
+}
+
+nav ul li a span .fa-solid:hover,
+nav ul li a span .fa-solid:active {
+    color: #9356DC;
+}
+
+.resto {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+    padding: 40px 20px;
+}
+
+.resto h2 {
+    margin: 0px;
+}
+
+.list-resto {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0% ;
+}
+
+.list-resto li{
+    min-width: 10%;
+    display: block;
+    margin: 20px 0px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.list-resto li a {
+    position: relative;
+}
+
+.new {
+    position: absolute;
+    background-color: #99E2D0;
+    color: #2D896A;
+    margin-left: 265px;
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.list-resto li .img{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.list-resto li .img img{
+    max-width: 100%;
+}
+
+.list-resto li .desc{
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-resto li .desc strong{
+    display:block;
+}
+
+.list-resto li .desc span{
+    display: block;
+    margin: 5px 0;
+}
+
+/************************************************
+
+    FOOTER
+
+*************************************************/
+footer {
+    background-color: rgba(0, 0, 0, 0.813);
+    padding: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.logo-2 h4 {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-family: 'Shrikhand', cursive;
+    color: white;
+}
+
+footer ul {
+    padding: 0%;
+    margin: 0px 0px 20px 0px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+}
+/************************************************
+
+    HEADER LIST
+
+*************************************************/
+.banner {
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    align-items: center;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+/************************************************
+
+    MAIN LISTE DES PLATS
+
+*************************************************/
+.title {
+    font-size: 1rem;
+    border-bottom: 2px solid #99E2D0;
+    padding-bottom: 5px;
+}
+
+.list {
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 20px;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+    margin-top: -40px;
+}
+
+.title-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px
+}
+
+.hearts .fa-regular:hover,
+.hearts .fa-regular:active {
+    font-weight: 900;
+    color: #FF79DA;
+}
+
+
+
+.title-menu h2 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.list-entries {
+    max-width: 100%;
+    margin-top: 25px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-entries li {
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.list-entries li a {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-entries .desc {
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list-entries li .desc .text-desc {
+    width: 100%;
+}
+
+.list-entries li .desc strong{
+    display:block;
+}
+
+.list-entries li .desc span{
+    display: block;
+    margin: 5px 0;
+}
+
+.price {
+    display: flex;
+    align-self: end;
+}
+
+.like {
+    display: none;
+    background-color: #99E2D0;
+    width: 70px;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.like i {
+    color: white;
+}
+
+.command {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.command .button {
+    margin: 0%;
+}
