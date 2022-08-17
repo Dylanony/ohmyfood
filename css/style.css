@@ -49,6 +49,29 @@ a{
     MAIN
 
 *************************************************/
+.loading {
+    width: 60px;
+    margin: auto;
+}
+
+.loading i {
+    font-size: 60px;
+    animation: load 6s;
+    opacity: 0;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+        animation-duration: 5s;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 .text-main {
     display: flex;
@@ -96,11 +119,12 @@ h1, p {
 *************************************************/
 
 .fonction {
-    padding: 40px 20px
+    padding: 0px 20px 40px;
 }
 
 .fonction h2 {
     margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .list-fonc {
@@ -133,10 +157,9 @@ h1, p {
     align-items: center;
 }
 
-nav .list-resto li:hover,
-nav .list-resto li:active {
+.list-fonc li a:hover,
+.list-fonc li a:active {
     background-color: #F4EDFE;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
 }
 
 .number {
@@ -159,8 +182,8 @@ nav .list-resto li:active {
     margin-right: 20px;
 }
 
-nav ul li a span .fa-solid:hover,
-nav ul li a span .fa-solid:active {
+.list-fonc li a:hover span i,
+.list-fonc li a:active span i {
     color: #9356DC;
 }
 
@@ -191,6 +214,12 @@ nav ul li a span .fa-solid:active {
     border-radius: 15px;
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+nav .list-resto li:hover,
+nav .list-resto li:active {
+    background-color: #F4EDFE;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
 }
 
 .list-resto li a {
@@ -271,6 +300,10 @@ footer ul li {
 footer ul li a {
     color: white;
 }
+
+footer ul li a:hover {
+    color: #FF79DA;
+}
 /************************************************
 
     HEADER LIST
@@ -294,8 +327,14 @@ footer ul li a {
 *************************************************/
 .title {
     font-size: 1rem;
-    border-bottom: 2px solid #99E2D0;
     padding-bottom: 5px;
+}
+
+.sous-ligne {
+    height: 2px;
+    width: 40px;
+    margin-top: 7px;
+    background-color: #99E2D0;
 }
 
 .list {
@@ -309,8 +348,38 @@ footer ul li a {
     margin-top: -40px;
 }
 
-.list-choice, .title-menu, .command{
+.list-entries {
     animation: apparition 0.8s ease-out;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.list-dishes {
+    animation: apparition 0.8s ease-out;
+    -webkit-animation-delay: 0.5s;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.list-desserts, .command{
+    animation: apparition 0.8s ease-out;
+    -webkit-animation-delay: 1s;
 }
 @keyframes apparition {
     from {
@@ -330,18 +399,23 @@ footer ul li a {
     padding-top: 20px
 }
 
-.hearts .fa-regular:hover,
-.hearts .fa-regular:active {
+.hearts i {
+    font-size: 25px;    
+}
+
+.hearts i:hover:before,
+.hearts i:active:after {
+    background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
     font-weight: 900;
-    color: #FF79DA;
-    -webkit-transition: color 500ms;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
 }
 
 .title-menu h2 {
     font-family: 'Shrikhand', cursive;
 }
 
-.list-entries {
+.list-entries, .list-dishes, .list-desserts {
     max-width: 100%;
     margin-top: 25px;
     padding: 0%;
@@ -350,7 +424,7 @@ footer ul li a {
     justify-content: center;
 }
 
-.list-entries li {
+.list-choice li {
     margin-bottom: 30px;
     max-width: 100%;
     height: 70px;
@@ -362,16 +436,17 @@ footer ul li a {
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 }
 
-.list-entries li a {
+.list-choice li a {
     border-radius: 20px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
-.list-entries .desc {
+.list-choice .desc {
     padding: 10px;
     color: black;
     display: flex;
@@ -380,15 +455,15 @@ footer ul li a {
     width: 100%;
 }
 
-.list-entries li .desc .text-desc {
+.list-choice li .desc .text-desc {
     width: 100%;
 }
 
-.list-entries li .desc strong{
+.list-choice li .desc strong{
     display:block;
 }
 
-.list-entries li .desc span{
+.list-choice li .desc span{
     display: block;
     margin: 5px 0;
 }
@@ -396,6 +471,8 @@ footer ul li a {
 .price {
     display: flex;
     align-self: end;
+    padding-right: 20px;
+    padding-bottom: 4px;
 }
 
 .like {
@@ -403,14 +480,30 @@ footer ul li a {
     width: 70px;
     height: 100%;
     border-radius: 0px 20px 20px 0px;
+    margin-right: -1000px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    transition: margin 1s;
+    -webkit-transition: margin 500ms;
+}
+
+.list-choice li a:hover .like {
+    margin-right: 0px;
 }
 
 
 .like i {
+    font-size: 20px;
     color: white;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.list-choice li a:hover i {
+    transform: scale(1);
+    transform: rotate(0deg);
 }
 
 .command {
