@@ -3,7 +3,6 @@
     GLOBAL
 
 *************************************************/
-
 body {
     font-family: 'Roboto', sans-serif;
     width: 425px;
@@ -16,7 +15,7 @@ li{
 
 a{
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 /************************************************
 
@@ -79,9 +78,7 @@ a{
     justify-content: center;
     background-color: #F2F2F2;
     padding: 30px 20px 30px 20px;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 
@@ -255,7 +252,7 @@ nav .list-resto li:active {
 
 .list-resto li .desc{
     padding: 10px;
-    color: black;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -399,16 +396,36 @@ footer ul li a:hover {
     padding-top: 20px
 }
 
-.hearts i {
-    font-size: 25px;    
+.heart {
+    width: 32px;
+    height: 32px;
+    stroke:#333;
+    stroke-width: 2px;
+    fill:#FFF;
+    transition:fill 1s ease-in-out 0s, stroke 1s ease-in-out 0s;
+    cursor:pointer;
 }
 
-.hearts i:hover:before,
-.hearts i:active:after {
-    background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
-    font-weight: 900;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
+.heart:hover {
+    stroke:url(#MyGradient);
+    stroke-width: 2px;
+    fill:url(#MyGradient);
+}
+
+#MyGradient {
+    transform: rotate(90deg);
+}
+
+#heart-gradient {
+    opacity: 0.0;
+    display: inline-block;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+#heart-gradient:hover {
+    opacity: 1.0;
 }
 
 .title-menu h2 {
@@ -448,7 +465,7 @@ footer ul li a:hover {
 
 .list-choice .desc {
     padding: 10px;
-    color: black;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -459,13 +476,20 @@ footer ul li a:hover {
     width: 100%;
 }
 
-.list-choice li .desc strong{
+.list-choice li .desc strong {
     display:block;
 }
 
 .list-choice li .desc span{
     display: block;
     margin: 5px 0;
+}
+
+.list-choice li a:hover .desc span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
 }
 
 .price {
@@ -475,9 +499,16 @@ footer ul li a:hover {
     padding-bottom: 4px;
 }
 
+.list-choice li a:hover .price {
+    margin-left: -34px;
+    margin-top: 20px;
+    padding: 0px;
+    align-self: unset;
+}
+
 .like {
     background-color: #99E2D0;
-    width: 70px;
+    min-width: 70px;
     height: 100%;
     border-radius: 0px 20px 20px 0px;
     margin-right: -1000px;
@@ -490,6 +521,7 @@ footer ul li a:hover {
 
 .list-choice li a:hover .like {
     margin-right: 0px;
+    min-width: 70px;
 }
 
 
@@ -515,4 +547,120 @@ footer ul li a:hover {
 
 .command .button {
     margin: 0%;
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        background-color: #F2F2F2;
+    }
+
+    .annexe {
+        display: block;
+    }
+
+    .text-main {
+        width: 310px;
+    }
+
+    .list-fonc {
+        padding-left: 100px;
+    }
+
+    .list-fonc li {
+        max-width: 85%;
+    }
+
+    .number {
+        margin-right: 140px;
+    }
+
+    .new {
+        margin-left: 600px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width: none;
+        margin: auto;
+    }
+
+    .fonction {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .list-fonc {
+        padding-left: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .list-fonc li {
+        max-width: none;
+        width: 350px;
+        margin-bottom: 40px;
+        height: 90px;
+    }
+
+    .number {
+        margin-right: 60px;
+    }
+
+    .resto h2 {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .list-resto {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .list-resto li {
+        width: 700px;
+        margin: 40px auto;
+    }
+
+    .new {
+        margin-left: 570px;
+    }
+
+    footer .logo-2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /******************************************
+    
+                ANNEXE
+
+    ******************************************/
+    .banner {
+        height: 600px;
+    }
+
+    .title-menu {
+        justify-content: space-evenly;
+    }
+
+    .list-choice {
+        width: 500px;
+        margin: auto;
+    }
+
+    .list-entries, .list-dishes, .list-desserts {
+        width: 500px;
+    }
 }
