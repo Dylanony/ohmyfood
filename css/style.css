@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 425px;
     margin: 0px;
+    position: relative;
 }
 
 li{
@@ -49,26 +50,33 @@ a{
 
 *************************************************/
 .loading {
-    width: 60px;
-    margin: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+    animation: load 3s;
 }
 
 .loading i {
-    font-size: 60px;
-    animation: load 6s;
-    opacity: 0;
+    font-size: 120px;
+    margin-top: -30%;
     transform: rotate(360deg);
     transition: transform 0.5s ease-in-out;
+    animation: load 3s;
 }
 
 @keyframes load {
     from {
         transform: rotate(0deg);
-        opacity: 1;
+        z-index: 999;
         animation-duration: 5s;
     }
     to {
-        opacity: 0;
+        z-index: -1;
     }
 }
 
@@ -549,7 +557,7 @@ footer ul li a:hover {
     margin: 0%;
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 768px) {
     body {
         width: 100%;
     }
@@ -586,10 +594,6 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    body {
-        width: none;
-        margin: auto;
-    }
 
     .fonction {
         width: 1200px;
@@ -611,6 +615,10 @@ footer ul li a:hover {
 
     .number {
         margin-right: 60px;
+    }
+
+    .resto {
+        flex-direction: column;
     }
 
     .resto h2 {
