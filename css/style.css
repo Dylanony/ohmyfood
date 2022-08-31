@@ -63,7 +63,7 @@ a{
 
 .loading i {
     font-size: 120px;
-    margin-top: -30%;
+    margin-top: -430%;
     transform: rotate(360deg);
     transition: transform 0.5s ease-in-out;
     animation: load 3s;
@@ -420,11 +420,11 @@ footer ul li a:hover {
     fill:url(#MyGradient);
 }
 
-#MyGradient {
+#MyGradient, #MyGradient1, #MyGradient2, #MyGradient3 {
     transform: rotate(90deg);
 }
 
-#heart-gradient {
+#heart-gradient, #heart-gradient1, #heart-gradient2, #heart-gradient3 {
     opacity: 0.0;
     display: inline-block;
     -webkit-transition: opacity .4s ease;
@@ -433,6 +433,15 @@ footer ul li a:hover {
     transition: opacity .4s ease;
 }
 #heart-gradient:hover {
+    opacity: 1.0;
+}
+#heart-gradient1:hover {
+    opacity: 1.0;
+}
+#heart-gradient2:hover {
+    opacity: 1.0;
+}
+#heart-gradient3:hover {
     opacity: 1.0;
 }
 
@@ -562,6 +571,10 @@ footer ul li a:hover {
         width: 100%;
     }
 
+    .loading i {
+        margin-top: -250%;
+    }
+
     main {
         display: flex;
         justify-content: center;
@@ -595,9 +608,14 @@ footer ul li a:hover {
 
 @media screen and (min-width: 1000px) {
 
+    .loading i {
+        margin-top: -70%;
+    }
+
     .fonction {
         width: 1200px;
         margin: auto;
+        background-color: white;
     }
 
     .list-fonc {
