@@ -55,12 +55,13 @@ a{
     align-items: center;
     height: 100%;
     position: absolute;
-    background-color: white;
+    background-color: #F2F2F2;
     z-index: -1;
     animation: load 3s;
 }
 
 .loading i {
+    color: #9356DC;
     font-size: 120px;
     margin-top: -430%;
     transform: rotate(360deg);
