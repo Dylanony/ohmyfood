@@ -5,7 +5,6 @@
 *************************************************/
 body {
     font-family: 'Roboto', sans-serif;
-    width: 425px;
     margin: 0px;
     position: relative;
 }
@@ -124,6 +123,7 @@ h1, p {
 *************************************************/
 
 .fonction {
+    background-color: white;
     padding: 0px 20px 40px;
 }
 
@@ -615,7 +615,6 @@ footer ul li a:hover {
     .fonction {
         width: 1200px;
         margin: auto;
-        background-color: white;
     }
 
     .list-fonc {
