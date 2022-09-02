@@ -55,7 +55,7 @@ a{
     align-items: center;
     height: 100%;
     position: absolute;
-    background-color: #F2F2F2;
+    background-color: white;
     z-index: -1;
     animation: load 3s;
 }
@@ -125,12 +125,11 @@ h1, p {
 
 .fonction {
     background-color: white;
-    padding: 0px 20px 40px;
+    padding: 40px 20px 40px;
 }
 
 .fonction h2 {
     margin-bottom: 30px;
-    margin-top: 0px;
 }
 
 .list-fonc {
